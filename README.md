@@ -1,76 +1,63 @@
-<h2 align="center">
-  Portfolio Website - v2.0<br/>
-  <a href="https://soumyajit.vercel.app/" target="_blank">soumyajit.tech</a>
-</h2>
-<div align="center">
-  <img alt="Demo" src="./Images/readme-img1.png" />
-</div>
+# 👋 Hi, I’m Prasanthi Rapuru
 
-<br/>
+**Software Developer | Final-Year B.Tech (CSE) Student | React Portfolio Enthusiast**
 
-<center>
+---
 
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) &nbsp;
-[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) &nbsp;
-[![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) &nbsp;
-![GitHub Repo stars](https://img.shields.io/github/stars/soumyajit4419/Portfolio?color=red&logo=github&style=for-the-badge) &nbsp;
-![GitHub forks](https://img.shields.io/github/forks/soumyajit4419/Portfolio?color=red&logo=github&style=for-the-badge)
+## 🚀 Live Demo
 
-</center>
+[View My Portfolio](YOUR_LIVE_DEMO_LINK_HERE)
 
-<h3 align="center">
-    🔹
-    <a href="https://github.com/soumyajit4419/Portfolio/issues">Report Bug</a> &nbsp; &nbsp;
-    🔹
-    <a href="https://github.com/soumyajit4419/Portfolio/issues">Request Feature</a>
-</h3>
+---
 
-## TL;DR
+## 💼 About This Project
 
-You can fork this repo to modify and make changes of your own. Please give me proper credit by linking back to [Soumyajit4419](https://github.com/soumyajit4419/Portfolio). Thanks!
+This repository contains my personal portfolio website — a showcase of my skills, projects, and professional journey. Built using modern web technologies, the portfolio highlights who I am, what I work on, and how I approach development.
 
-## Built With
+**Why this portfolio?**  
+- To present a clean, interactive, and mobile-friendly profile  
+- To highlight projects, tech stack, and tools I use  
+- To make it easy for recruiters and collaborators to understand my strengths
 
-My personal portfolio <a href="https://soumyajit.vercel.app/" target="_blank">soumyajit.tech</a> which features some of my github projects as well as my resume and technical skills.<br/>
+---
 
-This project was built using these technologies.
+## 🧰 Built With
 
-- React.js
-- Node.js
-- Express.js
-- CSS3
-- VsCode
-- Vercel
+- **React** – For a dynamic and component-based UI  
+- **React-Bootstrap** – For responsive layout and styling  
+- **Particles.js** – To create engaging background animation  
+- **React Icons / SVGs** – For clean and modern icons  
+- **CSS Variables & Custom Themes** – For color consistency across components  
 
-## Features
+---
 
-**📖 Multi-Page Layout**
+## 📚 Features
 
-**🎨 Styled with React-Bootstrap and Css with easy to customize colors**
+| Feature | Description |
+|---|---|
+| **About Section** | A short intro with a personal avatar and a summary of my background |
+| **Skills** | Display of professional skillset with icons and sections |
+| **Tools** | A dedicated section to tools and technologies I frequently use |
+| **Projects** | Showcase of my past work, with links, images, and descriptions |
+| **GitHub Section** | Shows my GitHub stats, repos, and contributions |
+| **Responsive Design** | Mobile-first design: looks great on all devices |
 
-**📱 Fully Responsive**
+---
 
-## Getting Started
+## ✨ Highlights
 
-Clone down this repository. You will need `node.js` and `git` installed globally on your machine.
+- **Interactive UI** — Smooth animations, hover effects, and transitions  
+- **Themed Design** — Uses a consistent purple accent color (`--imp-text-color`) for highlights  
+- **Clean Code** — Modular components, well-structured CSS, and maintainable layout  
+- **Easy to Update** — You can quickly replace text, images, or projects via components  
 
-## 🛠 Installation and Setup Instructions
+---
 
-1. Installation: `npm install`
+## 🔧 Getting Started
 
-2. In the project directory, you can run: `npm start`
+These steps will get you a copy of the project up and running locally.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-The page will reload if you make edits.
-
-## Usage Instructions
-
-Open the project folder and Navigate to `/src/components/`. <br/>
-You will find all the components used and you can edit your information accordingly.
-
-### Show your support
-
-Give a ⭐ if you like this website!
-
-<a href="https://www.buymeacoffee.com/soumyajit4419" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" height= "60px" width= "217px" ></a>
+1. **Clone the repository**  
+   ```bash
+   git clone https://github.com/prasanthirapuru/Portfolio.git
+   cd Portfolio
