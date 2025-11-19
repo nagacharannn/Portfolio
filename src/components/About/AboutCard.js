@@ -16,7 +16,7 @@ function AboutCard() {
             <span className="purple"> B.Tech in Computer Science and Engineering (CSE)</span>.
             <br />
             I am from <span className="purple">Nellore, Andhra Pradesh</span> and I aspire to become a 
-            <span className="purple"> Software Developer</span>.
+            <br><span className="purple"> Software Developer</span>.
 
             <br />
             <br />
