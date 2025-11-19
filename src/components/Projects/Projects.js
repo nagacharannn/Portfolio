@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import  AI-chatbot from "../../Assets/Projects/AI-chatbot.png"; 
+import AIchatbot from "../../Assets/Projects/AIchatbot.png"; 
 import todolist from "../../Assets/Projects/todolist.jpg";  
 import waterqualityprediction from "../../Assets/Projects/waterqualityprediction.png";
 
