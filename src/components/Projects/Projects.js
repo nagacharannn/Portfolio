@@ -22,10 +22,10 @@ function Projects() {
             <ProjectCard
               imgPath={todolist}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              title="To-Do List"
+              description="A clean and responsive To-Do List web app that allows users to add, view, and manage daily tasks through an interactive calendar. Built using HTML, CSS, and JavaScript with localStorage for data persistence."
+              ghLink=" https://github.com/prasanthirapuru/to-do-list"
+              demoLink="https://to-do-list-livid-phi-58.vercel.app/"
             />
           </Col>
 
@@ -33,10 +33,10 @@ function Projects() {
             <ProjectCard
               imgPath={waterqualityprediction}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              title="Quality Prediction"
+              description="A machine learning–based Water Quality Prediction app that forecasts key pollutant levels using historical environmental data. Built with Python, Pandas, NumPy, Scikit-learn, and deployed using Streamlit for an interactive web interface."
+              ghLink="https://github.com/prasanthirapuru/waterqualityprediction"
+              demoLink="https://waterqualityprediction-oedcfuqibfaou6pjdfd2tq.streamlit.app/"
             />
           </Col>
 
@@ -44,10 +44,10 @@ function Projects() {
             <ProjectCard
               imgPath={AIchatbot}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              title="AI-Chatbot"
+              description="An AI-powered chatbot that interacts with users in real time and provides intelligent responses based on user queries. Built using Node.js and Express for the backend, with integrated NLP/model APIs for conversational intelligence."
+              ghLink="https://github.com/prasanthirapuru/AI-chatbot"
+              demoLink="https://ai-chatbot-tau-two-40.vercel.app"              
             />
           </Col>
         </Row>
