@@ -1,53 +1,72 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
+import { HiOutlineDocumentText } from "react-icons/hi";
 import Particle from "../Particle";
-import pdf from "../../Assets/PrasanthiRapuru_Resume.pdf";
-import { AiOutlineDownload } from "react-icons/ai";
-import { Document, Page, pdfjs } from "react-pdf"; 
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+
+const FILE_ID = "12zRrVAA-sd4VB-DPd8mfPd-19JTWs7bX";
+const drivePreview = `https://drive.google.com/file/d/${FILE_ID}/preview`;
 
 function ResumeNew() {
-  const [width, setWidth] = useState(1200);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    setWidth(window.innerWidth);
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
-    <div>
-      <Container fluid className="resume-section">
-        <Particle />
-        <Row style={{ justifyContent: "center", position: "relative" }}>
-          <Button
-            variant="primary"
-            href={pdf}
-            target="_blank"
-            style={{ maxWidth: "250px" }}
-          >
-            <AiOutlineDownload />
-            &nbsp;Download CV
-          </Button>
-        </Row>
+    <div style={{ minHeight: "100vh", background: "transparent" }}>
+      <Particle />
 
-        <Row className="resume">
-          <Document file={pdf} className="d-flex justify-content-center">
-            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
-          </Document>
-        </Row>
+      {/* ── FULL-PAGE IFRAME ── */}
+      <div
+        style={{
+          paddingTop: "64px",
+          minHeight: "100vh",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          paddingBottom: "40px",
+        }}
+      >
+        {/* Decorative glow */}
+        <div
+          style={{
+            position: "fixed",
+            top: "30%",
+            left: "50%",
+            transform: "translateX(-50%)",
+            width: "600px",
+            height: "400px",
+            background:
+              "radial-gradient(ellipse, rgba(124,79,212,0.18) 0%, transparent 70%)",
+            pointerEvents: "none",
+            zIndex: 0,
+          }}
+        />
 
-        <Row style={{ justifyContent: "center", position: "relative" }}>
-          <Button
-            variant="primary"
-            href={pdf}
-            target="_blank"
-            style={{ maxWidth: "250px" }}
-          >
-            <AiOutlineDownload />
-            &nbsp;Download CV
-          </Button>
-        </Row>
-      </Container>
+        <div
+          style={{
+            position: "relative",
+            zIndex: 1,
+            width: "min(860px, 95vw)",
+            marginTop: "24px",
+            borderRadius: "16px",
+            overflow: "hidden",
+            boxShadow:
+              "0 0 0 1px rgba(179,122,249,0.2), 0 24px 60px rgba(0,0,0,0.5), 0 0 80px rgba(124,79,212,0.15)",
+          }}
+        >
+          <iframe
+            src={drivePreview}
+            width="100%"
+            height="1000px"
+            style={{ border: "none", display: "block", background: "#fff" }}
+            title="Resume PDF"
+            allow="autoplay"
+          />
+        </div>
+      </div>
     </div>
   );
 }
