@@ -2,9 +2,6 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap"; 
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import AIchatbot from "../../Assets/Projects/AIchatbot.png";  
-import cloudguardai from "../../Assets/Projects/cloudguardai.png";   
-import waterqualityprediction from "../../Assets/Projects/waterqualityprediction.png"; 
  
 function Projects() {
   return (
@@ -20,36 +17,83 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={cloudguardai}
-              isBlog={false}
-              title="CloudGuard_AI"
-              description="A backend-driven cloud security analysis system built using Django and machine learning techniques.It detects anomalies and classifies potential threats from cloud data efficiently.The system provides APIs for data processing, model execution, and prediction workflows."
-              ghLink="https://github.com/prasanthirapuru/cloud-security-project"
-              demoLink="https://cloud-security-project.onrender.com"
+              title="Social media trend"
+              driveLink="https://drive.google.com/file/d/1dBggJAnvX3cp8FBiMj_aPfkt3zc7sPBr/view?usp=sharing"
+              ratio="9:16"
+              isImage={false}
             />
           </Col>
-
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={waterqualityprediction}
-              isBlog={false}
-              title="Quality Prediction"
-              description="A machine learning–based Water Quality Prediction app that forecasts key pollutant levels using historical environmental data. Built with Python, Pandas, NumPy, Scikit-learn, and deployed using Streamlit for an interactive web interface."
-              ghLink="https://github.com/prasanthirapuru/waterqualityprediction"
-              demoLink="https://waterqualityprediction-oedcfuqibfaou6pjdfd2tq.streamlit.app/"
+              title="Graphic design"
+              driveLink="https://drive.google.com/file/d/1pm_uqqRCdftgXd98KG7C2m2SNu5_Fl7b/view"
+              ratio="9:16"
+              isImage={true}
             />
           </Col>
-
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={AIchatbot}
-              isBlog={false}
-              title="AI-Chatbot"
-              description="An AI-powered chatbot that interacts with users in real time and provides intelligent responses based on user queries. Built using Node.js and Express for the backend, with integrated NLP/model APIs for conversational intelligence."
-              ghLink="https://github.com/prasanthirapuru/AI-chatbot"
-              demoLink="https://ai-chatbot-tau-two-40.vercel.app"              
+              title="Kathanika"
+              driveLink="https://drive.google.com/file/d/1PG5SOrTKu7x9TRYHzITwiGurAB3aOO0t/preview"
+              ratio="9:16"
+              isImage={false}
             />
           </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              title="Thumbnail"
+              driveLink="https://drive.google.com/file/d/194hBW020hP6lCfcVURfD9h-pgYpVZ64G/preview"
+              ratio="9:16"
+              isImage={true}
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              title="Podcast"
+              driveLink="https://drive.google.com/file/d/1KJTA19ITTjxdYDS8hOiS7VvX4AczjnaI/preview"
+              ratio="9:16"
+              isImage={false}
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              title="Commercial promotions"
+              driveLink="https://drive.google.com/file/d/1zrIdEy3FqkkHBe6rGV_uBwstWUJwgRpT/preview"
+              ratio="9:16"
+              isImage={false}
+            />
+          </Col>
+          
+          <Col md={4} className="project-card">
+            <ProjectCard
+              isBlog={false}
+              title="PRABHAS|My Name Is Billa lyrics Edi"
+              
+              videoLink="https://www.youtube.com/watch?v=10WNKtv7u3M"
+
+              caption="PRABHAS|My Name Is Billa lyrics Edit"
+              ratio="16:9"
+              isImage={false}
+
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              isBlog={false}
+              title="3d camera tracking"
+              
+              driveLink="https://drive.google.com/file/d/1NiH5zgIUwQamD9U7hLuvAmPWAhh61qVI/preview"
+
+              caption="3d camera tracking"
+              ratio="16:9"
+              isImage={false}
+
+            />
+          </Col>
+          
+          
+          
+          
         </Row>
       </Container>
     </Container>

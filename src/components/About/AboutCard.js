@@ -1,4 +1,3 @@
-
 import React from "react";
 import Card from "react-bootstrap/Card";
 import { ImPointRight } from "react-icons/im";
@@ -9,24 +8,22 @@ function AboutCard() {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-            Hi everyone! I’m <span className="purple">Prasanthi Rapuru</span>{" "}
+            Hi everyone! I’m <span className="purple">Nagacharan Tambusetty</span>{" "}
             from <span className="purple">Andhra Pradesh, India</span>.
             <br />
-            I’m currently pursuing my <span className="purple">final year</span> of 
-            <span className="purple"> B.Tech in Computer Science and Engineering (CSE)</span>.
+            
+           I am a <span className="purple">video editor</span> who brings stories to life through 
+            <span className="purple"> clean</span>, 
+            <span className="purple"> engaging</span>, and 
+            <span className="purple"> impactful visuals</span>.
             <br />
-            I am from <span className="purple">Nellore, Andhra Pradesh</span> and I aspire to become a 
-            <br /><span className="purple"> Software Developer</span>.
-
             <br />
-            <br />
-            Outside of coding, I love engaging in activities that keep me
-            creative and inspired:
+            Outside of editing, I love exploring activities that keep me inspired and creative:
           </p>
 
           <ul>
             <li className="about-activity">
-              <ImPointRight /> Playing Games 🎮
+              <ImPointRight /> Video Editing & Visual Effects 🎬
             </li>
             <li className="about-activity">
               <ImPointRight /> Exploring AI tools 🤖
@@ -37,9 +34,9 @@ function AboutCard() {
           </ul>
 
           <p style={{ color: "rgb(155 126 172)" }}>
-            "Strive to build things that make a difference!"{" "}
+            "Strive to create visuals that leave a lasting impact."{" "}
           </p>
-          <footer className="blockquote-footer">Prasanthi Rapuru</footer>
+          <footer className="blockquote-footer">Nagacharan Tambusetty</footer>
         </blockquote>
       </Card.Body>
     </Card>

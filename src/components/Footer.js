@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import {
   AiFillGithub,
 } from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 
 function Footer() {
   let date = new Date();
@@ -12,34 +12,24 @@ function Footer() {
     <Container fluid className="footer">
       <Row>
         <Col md="4" className="footer-copywright">
-          <h3>Designed and Developed by Prasanthi Rapuru</h3>
+          <h3>Ngacharan | Video Editor</h3>
         </Col>
         <Col md="4" className="footer-copywright">
-          <h3>Copyright © {year} PR</h3>
+          <h3>Copyright © {year} NC </h3>
         </Col>
         <Col md="4" className="footer-body">
           <ul className="footer-icons">
             {/* GitHub Icon */}
-            <li className="social-icons">
-              <a
-                href="https://github.com/prasanthirapuru" 
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <AiFillGithub />
-              </a>
-            </li>
             
-           
             <li className="social-icons">
+              
               <a
-                href="https://www.linkedin.com/in/prasanthi-rapuru-ba7ab8370"
-                style={{ color: "white" }}
-                target="_blank" 
+                href="https://www.instagram.com/___charan__02/?igsh=MnFpZjBiZDA2MzRh"
+                style={{ color: "white", marginLeft: "10px" }} // spacing between icons
+                target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaLinkedinIn />
+                <FaInstagram />
               </a>
             </li>
             
