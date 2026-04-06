@@ -42,7 +42,7 @@ function Projects() {
           <Col md={4} className="project-card">
             <ProjectCard
               title="Thumbnail"
-              driveLink="https://drive.google.com/file/d/194hBW020hP6lCfcVURfD9h-pgYpVZ64G/preview"
+              driveLink="https://drive.google.com/file/d/194hBW020hP6lCfcVURfD9h-pgYpVZ64G/view"
               ratio="9:16"
               isImage={true}
             />
@@ -50,7 +50,7 @@ function Projects() {
           <Col md={4} className="project-card">
             <ProjectCard
               title="Podcast"
-              driveLink="https://drive.google.com/file/d/1KJTA19ITTjxdYDS8hOiS7VvX4AczjnaI/preview"
+              driveLink="https://drive.google.com/file/d/1KJTA19ITTjxdYDS8hOiS7VvX4AczjnaI/view"
               ratio="9:16"
               isImage={false}
             />
@@ -58,7 +58,7 @@ function Projects() {
           <Col md={4} className="project-card">
             <ProjectCard
               title="Commercial promotions"
-              driveLink="https://drive.google.com/file/d/1zrIdEy3FqkkHBe6rGV_uBwstWUJwgRpT/preview"
+              driveLink="https://drive.google.com/file/d/1zrIdEy3FqkkHBe6rGV_uBwstWUJwgRpT/view"
               ratio="9:16"
               isImage={false}
             />
