@@ -82,7 +82,7 @@ function Projects() {
           <Col md={4} className="project-card">
             <ProjectCard
               isBlog={false}
-              title="PRABHAS|My Name Is Billa lyrics Edi"
+              title="PRABHAS"
               
               videoLink="https://www.youtube.com/watch?v=10WNKtv7u3M"
 
