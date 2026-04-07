@@ -1,6 +1,5 @@
 # 👋 Hi, Nagacharan Tambusetty
 
-**Software Developer | Final-Year B.Tech (CSE) Student | React Portfolio Enthusiast**
 
 ---
 
