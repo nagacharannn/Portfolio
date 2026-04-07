@@ -25,12 +25,21 @@ function Projects() {
           </Col>
           <Col md={4} className="project-card">
             <ProjectCard
-              title="Graphic design"
-              driveLink="https://drive.google.com/file/d/1pm_uqqRCdftgXd98KG7C2m2SNu5_Fl7b/view"
+              title="Podcast"
+              driveLink="https://drive.google.com/file/d/1KJTA19ITTjxdYDS8hOiS7VvX4AczjnaI/view"
               ratio="9:16"
-              isImage={true}
+              isImage={false}
             />
           </Col>
+           <Col md={4} className="project-card">
+            <ProjectCard
+              title="Commercial promotions"
+              driveLink="https://drive.google.com/file/d/1zrIdEy3FqkkHBe6rGV_uBwstWUJwgRpT/view"
+              ratio="9:16"
+              isImage={false}
+            />
+          </Col>
+          
           <Col md={4} className="project-card">
             <ProjectCard
               title="Kathanika"
@@ -49,18 +58,24 @@ function Projects() {
           </Col>
           <Col md={4} className="project-card">
             <ProjectCard
-              title="Podcast"
-              driveLink="https://drive.google.com/file/d/1KJTA19ITTjxdYDS8hOiS7VvX4AczjnaI/view"
+              title="Graphic design"
+              driveLink="https://drive.google.com/file/d/1pm_uqqRCdftgXd98KG7C2m2SNu5_Fl7b/view"
               ratio="9:16"
-              isImage={false}
+              isImage={true}
             />
           </Col>
+          
           <Col md={4} className="project-card">
             <ProjectCard
-              title="Commercial promotions"
-              driveLink="https://drive.google.com/file/d/1zrIdEy3FqkkHBe6rGV_uBwstWUJwgRpT/view"
-              ratio="9:16"
+              isBlog={false}
+              title="3d camera tracking"
+              
+              driveLink="https://drive.google.com/file/d/1NiH5zgIUwQamD9U7hLuvAmPWAhh61qVI/preview"
+
+              caption="3d camera tracking"
+              ratio="16:9"
               isImage={false}
+
             />
           </Col>
           
@@ -77,19 +92,7 @@ function Projects() {
 
             />
           </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              isBlog={false}
-              title="3d camera tracking"
-              
-              driveLink="https://drive.google.com/file/d/1NiH5zgIUwQamD9U7hLuvAmPWAhh61qVI/preview"
-
-              caption="3d camera tracking"
-              ratio="16:9"
-              isImage={false}
-
-            />
-          </Col>
+          
           
           
           
