@@ -1,7 +1,7 @@
 import React from "react";
 import Particle from "../Particle";
 
-const FILE_ID = "12zRrVAA-sd4VB-DPd8mfPd-19JTWs7bX";
+const FILE_ID = "1atPz2HA-wsJ3Aj9cGzIOb3XJUfudH9vE";
 const drivePreview = `https://drive.google.com/file/d/${FILE_ID}/preview`;
 
 function ResumeNew() {
