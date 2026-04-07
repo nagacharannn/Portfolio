@@ -86,7 +86,7 @@ function Projects() {
               
               videoLink="https://www.youtube.com/watch?v=10WNKtv7u3M"
 
-              caption="PRABHAS|My Name Is Billa lyrics Edit"
+              caption="PRABHAS"
               ratio="16:9"
               isImage={false}
 
