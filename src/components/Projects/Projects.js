@@ -26,7 +26,7 @@ function Projects() {
           <Col md={4} className="project-card">
             <ProjectCard
               title="Podcast"
-              driveLink="https://drive.google.com/file/d/1KJTA19ITTjxdYDS8hOiS7VvX4AczjnaI/view"
+              driveLink="https://drive.google.com/file/d/1D-JbvbCQePqvbGXE_Z82F-WSz1D7boMo/preview"
               ratio="9:16"
               isImage={false}
             />
@@ -34,7 +34,7 @@ function Projects() {
            <Col md={4} className="project-card">
             <ProjectCard
               title="Commercial promotions"
-              driveLink="https://drive.google.com/file/d/1zrIdEy3FqkkHBe6rGV_uBwstWUJwgRpT/view"
+              driveLink="https://drive.google.com/file/d/1xFg6Rg3ihRlxMYPREaPW0CBrjmA67NaK/preview"
               ratio="9:16"
               isImage={false}
             />
