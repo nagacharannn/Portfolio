@@ -1,4 +1,4 @@
-# 👋 Hi, I’m Prasanthi Rapuru
+# 👋 Hi, Nagacharan Tambusetty
 
 **Software Developer | Final-Year B.Tech (CSE) Student | React Portfolio Enthusiast**
 
@@ -6,7 +6,7 @@
 
 ## 🚀 Live Demo
 
-[View My Portfolio](https://portfolio-roan-six-23.vercel.app/)
+[View My Portfolio](https://portfolio-l72q.vercel.app/)
 
 ---
 
