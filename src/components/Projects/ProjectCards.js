@@ -8,7 +8,15 @@ function ProjectCards(props) {
 
   const iframeRef = useRef(null);
 
-  const { title, description, videoLink, driveLink, ratio, isImage } = props;
+  const {
+    title,
+    description,
+    videoLink,
+    driveLink,
+    ratio,
+    isImage,
+    customThumbnail, // ✅ NEW
+  } = props;
 
   /* ------------------ YOUTUBE ID PARSER ------------------ */
   const getYouTubeID = (url) => {
@@ -25,55 +33,43 @@ function ProjectCards(props) {
 
   const videoID = videoLink ? getYouTubeID(videoLink) : null;
 
-  /* ------------------ YOUTUBE THUMBNAIL FETCH ------------------ */
+  /* ------------------ YOUTUBE THUMBNAIL ------------------ */
   useEffect(() => {
     if (!videoID) return;
 
-    const tryThumbnail = (qualities, index = 0) => {
-      if (index >= qualities.length) {
-        setThumbnail(`https://img.youtube.com/vi/${videoID}/hqdefault.jpg`);
-        setThumbLoaded(true);
-        return;
-      }
-
-      const url = `https://img.youtube.com/vi/${videoID}/${qualities[index]}`;
-      const img = new Image();
-
-      img.onload = () => {
-        if (img.width > 120) {
-          setThumbnail(url);
-          setThumbLoaded(true);
-        } else {
-          tryThumbnail(qualities, index + 1);
-        }
-      };
-
-      img.onerror = () => tryThumbnail(qualities, index + 1);
-      img.src = url;
-    };
-
-    tryThumbnail([
+    const qualities = [
       "maxresdefault.jpg",
       "sddefault.jpg",
       "hqdefault.jpg",
       "mqdefault.jpg",
       "default.jpg",
-    ]);
+    ];
+
+    let loaded = false;
+
+    qualities.forEach((q) => {
+      const img = new Image();
+      const url = `https://img.youtube.com/vi/${videoID}/${q}`;
+      img.src = url;
+
+      img.onload = () => {
+        if (!loaded && img.width > 120) {
+          setThumbnail(url);
+          setThumbLoaded(true);
+          loaded = true;
+        }
+      };
+    });
   }, [videoID]);
 
-  /* ------------------ GOOGLE DRIVE ID PARSER ------------------ */
+  /* ------------------ DRIVE FILE ID ------------------ */
   const getDriveFileID = (url) => {
-    try {
-      const match = url.match(/\/d\/([a-zA-Z0-9_-]+)/);
-      return match ? match[1] : null;
-    } catch {
-      return null;
-    }
+    const match = url?.match(/\/d\/([a-zA-Z0-9_-]+)/);
+    return match ? match[1] : null;
   };
 
   const driveFileID = driveLink ? getDriveFileID(driveLink) : null;
 
-  /* ------------------ DRIVE THUMBNAIL + FALLBACK ------------------ */
   const driveThumbnail = driveFileID
     ? `https://drive.google.com/thumbnail?id=${driveFileID}&sz=w800`
     : null;
@@ -82,79 +78,69 @@ function ProjectCards(props) {
     ? `https://drive.google.com/file/d/${driveFileID}/preview`
     : null;
 
-  /* ------------------ HEIGHT BASED ON RATIO ------------------ */
+  /* ------------------ HEIGHT ------------------ */
   const videoHeight =
     ratio === "16:9" ? "220px" : ratio === "9:16" ? "600px" : "300px";
 
-  /* ------------------ CLICK HANDLER ------------------ */
   const handleClick = () => {
-    if (isImage) return;
-    setIsPlaying(true);
+    if (!isImage) setIsPlaying(true);
   };
 
   return (
     <Card className="project-card-view">
       <div
-        className="video-container"
         style={{
           position: "relative",
           width: "100%",
           height: videoHeight,
-          minHeight: videoHeight,
-          borderRadius: "0.5rem",
           overflow: "hidden",
-          backgroundColor: "#000",
+          background: "#000",
           marginBottom: "1rem",
         }}
       >
-        {/* ------------ DRIVE VIDEO IFRAME ------------ */}
-        {drivePreview && !isImage && isPlaying && (
+        {/* VIDEO PLAY */}
+        {drivePreview && isPlaying && !isImage && (
           <iframe
-            ref={iframeRef}
             src={drivePreview}
             width="100%"
             height="100%"
             allow="autoplay; fullscreen"
             allowFullScreen
-            style={{
-              position: "absolute",
-              inset: 0,
-              border: "none",
-              zIndex: 4,
-            }}
+            style={{ position: "absolute", inset: 0, border: "none", zIndex: 5 }}
           />
         )}
 
-        {/* ------------ YOUTUBE VIDEO IFRAME ------------ */}
-        {videoID && !isImage && isPlaying && (
+        {videoID && isPlaying && !isImage && (
           <iframe
+            src={`https://www.youtube.com/embed/${videoID}?autoplay=1`}
             width="100%"
             height="100%"
-            src={`https://www.youtube.com/embed/${videoID}?autoplay=1&controls=1`}
-            title={title}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-            style={{
-              position: "absolute",
-              inset: 0,
-              border: "none",
-              zIndex: 4,
-            }}
+            style={{ position: "absolute", inset: 0, border: "none", zIndex: 5 }}
           />
         )}
 
-        {/* ------------ THUMBNAIL LAYER ------------ */}
+        {/* THUMBNAIL */}
         <div
           onClick={handleClick}
           style={{
             position: "absolute",
             inset: 0,
-            zIndex: 3,
             cursor: isImage ? "default" : "pointer",
+            zIndex: 3,
           }}
         >
-          {/* YOUTUBE THUMBNAIL */}
-          {videoID && thumbLoaded && (
+          {/* ✅ CUSTOM THUMBNAIL (PRIORITY) */}
+          {customThumbnail && (
+            <img
+              src={customThumbnail}
+              alt={title}
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            />
+          )}
+
+          {/* YOUTUBE */}
+          {!customThumbnail && videoID && thumbLoaded && (
             <img
               src={thumbnail}
               alt={title}
@@ -162,19 +148,17 @@ function ProjectCards(props) {
             />
           )}
 
-          {/* DRIVE THUMBNAIL WITH FALLBACK TO PREVIEW */}
-          {driveLink && (
+          {/* DRIVE */}
+          {!customThumbnail && driveLink && (
             <img
               src={driveThumbnail}
               alt={title}
-              onError={(e) => {
-                e.target.src = drivePreview; // ⭐ ALWAYS LOAD PREVIEW IF THUMBNAIL FAILS
-              }}
+              onError={(e) => (e.target.src = drivePreview)}
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
           )}
 
-          {/* PLAY BUTTON (NOT FOR IMAGES) */}
+          {/* PLAY BUTTON */}
           {!isImage && (
             <div
               style={{
@@ -182,16 +166,15 @@ function ProjectCards(props) {
                 top: "50%",
                 left: "50%",
                 transform: "translate(-50%, -50%)",
-                backgroundColor: "rgba(0,0,0,0.65)",
+                background: "rgba(0,0,0,0.6)",
                 borderRadius: "50%",
-                width: "64px",
-                height: "64px",
+                width: "60px",
+                height: "60px",
                 display: "flex",
-                alignItems: "center",
                 justifyContent: "center",
-                color: "white",
-                fontSize: "28px",
-                boxShadow: "0 0 12px rgba(0,0,0,0.5)",
+                alignItems: "center",
+                color: "#fff",
+                fontSize: "24px",
               }}
             >
               ▶
@@ -200,10 +183,9 @@ function ProjectCards(props) {
         </div>
       </div>
 
-      {/* ------------ CARD CONTENT ------------ */}
       <Card.Body>
         <Card.Title>{title}</Card.Title>
-        <Card.Text style={{ textAlign: "justify" }}>{description}</Card.Text>
+        <Card.Text>{description}</Card.Text>
       </Card.Body>
     </Card>
   );
