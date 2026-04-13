@@ -42,8 +42,8 @@ function Projects() {
           
           <Col md={4} className="project-card">
             <ProjectCard
-              title="Kathanika"
-              driveLink="https://drive.google.com/file/d/1PG5SOrTKu7x9TRYHzITwiGurAB3aOO0t/preview"
+              title="Talking Head"
+              driveLink="https://drive.google.com/file/d/1SF0voVLCR-yuR6F5650PcyzH4KvGsbJD/preview"
               ratio="9:16"
               isImage={false}
             />
