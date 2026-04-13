@@ -15,14 +15,38 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+           <Col md={4} className="project-card">
+            <ProjectCard
+              title="Graphic design"
+              driveLink="https://drive.google.com/file/d/1pm_uqqRCdftgXd98KG7C2m2SNu5_Fl7b/view"
+              ratio="9:16"
+              isImage={true}
+            />
+          </Col>
           <Col md={4} className="project-card">
             <ProjectCard
-              title="Social media trend"
+              title="Motion Graphics"
+              driveLink="https://drive.google.com/file/d/17k8_mQvYlHLgiy9VKnpTwDl8z2spfNWc/preview"
+              ratio="9:16"
+              isImage={false}
+            />
+          </Col>     
+          <Col md={4} className="project-card">
+            <ProjectCard
+              title="Speed Ramping"
               driveLink="https://drive.google.com/file/d/1dBggJAnvX3cp8FBiMj_aPfkt3zc7sPBr/view?usp=sharing"
               ratio="9:16"
               isImage={false}
             />
           </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              title="Talking Head"
+              driveLink="https://drive.google.com/file/d/1SF0voVLCR-yuR6F5650PcyzH4KvGsbJD/preview"
+              ratio="9:16"
+              isImage={false}
+            />
+          </Col>     
           <Col md={4} className="project-card">
             <ProjectCard
               title="Podcast"
@@ -31,23 +55,9 @@ function Projects() {
               isImage={false}
             />
           </Col>
-           <Col md={4} className="project-card">
-            <ProjectCard
-              title="Commercial promotions"
-              driveLink="https://drive.google.com/file/d/1xFg6Rg3ihRlxMYPREaPW0CBrjmA67NaK/preview"
-              ratio="9:16"
-              isImage={false}
-            />
-          </Col>
+           
           
-          <Col md={4} className="project-card">
-            <ProjectCard
-              title="Talking Head"
-              driveLink="https://drive.google.com/file/d/1SF0voVLCR-yuR6F5650PcyzH4KvGsbJD/preview"
-              ratio="9:16"
-              isImage={false}
-            />
-          </Col>
+          
           <Col md={4} className="project-card">
             <ProjectCard
               title="Thumbnail"
@@ -56,22 +66,13 @@ function Projects() {
               isImage={true}
             />
           </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              title="Graphic design"
-              driveLink="https://drive.google.com/file/d/1pm_uqqRCdftgXd98KG7C2m2SNu5_Fl7b/view"
-              ratio="9:16"
-              isImage={true}
-            />
-          </Col>
+          
           
           <Col md={4} className="project-card">
             <ProjectCard
               isBlog={false}
-              title="3d camera tracking"
-              
+              title="3d camera tracking"      
               driveLink="https://drive.google.com/file/d/1NiH5zgIUwQamD9U7hLuvAmPWAhh61qVI/preview"
-
               caption="3d camera tracking"
               ratio="16:9"
               isImage={false}
