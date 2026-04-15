@@ -31,7 +31,7 @@ function Projects() {
           {/* MOTION GRAPHICS (CUSTOM THUMBNAIL) */}
           <Col md={4} className="project-card">
             <ProjectCard
-              title="Motion Graphics"
+              title="Social Media Trends"
               driveLink="https://drive.google.com/file/d/17k8_mQvYlHLgiy9VKnpTwDl8z2spfNWc/preview"
               ratio="9:16"
               isImage={false}
